@@ -6,20 +6,15 @@ int main (void) {
   FILE *puzzleInputPointer = fopen("puzzle_input.txt", "r");
   int ch=0;
   int lines=0;
+  int numberArray[200];
 
   while(!feof(puzzleInputPointer)) {
     ch = fgetc(puzzleInputPointer);
     if(ch == '\n') {
+      fscanf(puzzleInputPointer, "%d", &numberArray[lines]);
       lines++;
     }
   }
-  int numberArray[200];
-  int k;
-  for (k = 0; k < lines; k++) {
-    fscanf(puzzleInputPointer, "%d", &numberArray[k]);
-  }
-
-  printf(numberArray);
 
   for (int i = 0; i < (lines - 1); i++) {
     for (int j = (i + 1); j < lines; j++) {
