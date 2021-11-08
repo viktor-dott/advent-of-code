@@ -19,7 +19,8 @@ int main (void) {
   for (int i = 0; i < (lines - 1); i++) {
     for (int j = (i + 1); j < lines; j++) {
       if (numberArray[i] + numberArray[j] == TARGET) {
-        printf("Pair with a given sum %d is %d, %d", TARGET, numberArray[i], numberArray[j]);
+        printf("Pair with a given sum %d is %d, %d\n", TARGET, numberArray[i], numberArray[j]);
+        printf("Final answer is: %d\n", numberArray[i]*numberArray[j]);
         return 1;
       }
     }
